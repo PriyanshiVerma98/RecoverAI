@@ -1,0 +1,14 @@
+{
+  "name": "recoverai",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n server,client \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "seed": "npm run seed --prefix server",
+    "test": "npm test --prefix server",
+    "ml:data": "python ml/generate_dataset.py",
+    "ml:train": "python ml/train.py"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
